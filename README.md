@@ -35,7 +35,7 @@
 ## 《系统设计面试：内幕指南（第二卷）》
 原名：《System Design Interview An Insider's Guide Volume 2》
 
-作者：Alex Xu &Sahn Lam
+作者：Alex Xu & Sahn Lam
 
 译者：精灵王 [@Admol](https://github.com/Admol)
 

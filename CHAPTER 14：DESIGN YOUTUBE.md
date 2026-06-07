@@ -219,7 +219,7 @@ YouTube 看起来很简单：内容创作者上传视频，观众点击播放。
 
 ![](images/chapter14/figure14-10.jpg)
 
-该架构有六个主要组成部分：预处理器（preprocessor）、DAG 调度器（DAG scheduler）、资源管理器（resource manager）、任务工作者（task workers,）、临时存储（temporary storage,）和作为输出的编码视频（encoded video a）。让我们仔细看看每个组件。
+该架构有六个主要组成部分：预处理器（preprocessor）、DAG 调度器（DAG scheduler）、资源管理器（resource manager）、任务工作者（task workers）、临时存储（temporary storage）和作为输出的编码视频（encoded video）。让我们仔细看看每个组件。
 
 **预处理器**
 
