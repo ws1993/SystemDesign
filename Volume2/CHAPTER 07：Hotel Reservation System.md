@@ -302,7 +302,9 @@ if (total_reserved + ${numberOfRoomsToReserve}) <= 110% * total_inventory
 1. **生成预订订单**。在客户输入预订的详细信息（房型、入住日期、退房日期等）并点击“继续”按钮后，预订服务会生成一个预订订单。
 2. 系统生成预订订单供客户核对。唯一的 `reservation_id` 由全局唯一 ID 生成器生成，并作为 API 响应的一部分返回。此步骤的 UI 可能如下所示：
 
-![Figure7.9.png](..%2Fimages%2Fv2%2Fchapter07%2FFigure7.9.png)图 9 确认页面 (来源：[4])
+![Figure7.9.png](..%2Fimages%2Fv2%2Fchapter07%2FFigure7.9.png)
+
+图 9 确认页面 (来源：[4])
 
 3a. **提交预订 1**。`reservation_id` 作为请求的一部分被包含在内。它是预订表（图 6）的主键。请注意，幂等键不一定要是 `reservation_id`。我们选择 `reservation_id` 是因为它已经存在，并且非常适用于我们的设计。
 

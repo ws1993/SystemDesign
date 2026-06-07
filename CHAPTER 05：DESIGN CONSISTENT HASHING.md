@@ -51,11 +51,15 @@ $$serverIndex = hash(key) \bmod N$$，其中 N 是服务器池的大小
 
 #### 哈希键
 
-值得一提的是，这里使用的哈希函数与“rehashing problem”中的哈希函数不同，没有模运算。 如图5-6所示，4个缓存键（key0、key1、key2、key3）被哈希到哈希环上。 ![](images/chapter5/figure5-6.jpg)
+值得一提的是，这里使用的哈希函数与“rehashing problem”中的哈希函数不同，没有模运算。 如图5-6所示，4个缓存键（key0、key1、key2、key3）被哈希到哈希环上。
+
+![](images/chapter5/figure5-6.jpg)
 
 #### 服务器查找
 
-为了确定键存放在哪个服务器上，我们从键在环上的位置顺时针查找，直到找到一个服务器。 图5-7解释了这个过程。顺时针方向查找，`key0`存储在`server0`；`key1`存储在`server1`；`key2`存储在`server2`，`key3`存储在`server3`。 ![](images/chapter5/figure5-7.jpg)
+为了确定键存放在哪个服务器上，我们从键在环上的位置顺时针查找，直到找到一个服务器。 图5-7解释了这个过程。顺时针方向查找，`key0`存储在`server0`；`key1`存储在`server1`；`key2`存储在`server2`，`key3`存储在`server3`。
+
+![](images/chapter5/figure5-7.jpg)
 
 #### 添加一台服务器
 
