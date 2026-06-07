@@ -20,7 +20,7 @@
 * [第 4 章：设计一个分布式限流器](<CHAPTER 04：DESIGN A RATE LIMITER.md>)
 * [第 5 章：一致性哈希设计](<CHAPTER 05：DESIGN CONSISTENT HASHING.md>)
 * [第 6 章：设计一个 key-value 存储系统](<CHAPTER 06：DESIGN A KEY-VALUE STORE.md>)
-* [第 7 章：设计一个分布式系统唯一ID生成器](<CHAPTER 07：DESIGN A UNIQUE ID GENERATOR IN DISTRIBUTED SYSTEMS.md>)
+* [第 7 章：设计一个分布式系统唯一 ID 生成器](<CHAPTER 07：DESIGN A UNIQUE ID GENERATOR IN DISTRIBUTED SYSTEMS.md>)
 * [第 8 章：设计一个短网址系统](<CHAPTER 08：DESIGN A URL SHORTENER.md>)
 * [第 9 章：设计一个网络爬虫系统](<CHAPTER 09：DESIGN A WEB CRAWLER.md>)
 * [第 10章：设计一个通知系统](<CHAPTER 10：DESIGN A NOTIFICATION SYSTEM.md>)
@@ -49,7 +49,7 @@
 - [第6章 广告点击事件聚合](<Volume2/CHAPTER 06：Ad Click Event Aggregation.md>)
 - [第7章 酒店预订系统](<Volume2/CHAPTER 07：Hotel Reservation System.md>)
 - [ ] 第8章 分布式邮件服务
-- [ ] 第9章 类S3对象存储
+- [ ] 第9章 类 S3 对象存储
 - [第10章：实时游戏排行榜](<Volume2/CHAPTER 10：Real-time Gaming Leaderboard.md>)
 - [ ] 第11章 支付系统
 - [ ] 第12章 数字钱包
