@@ -432,7 +432,7 @@ PSP 负责将资金从账户 A 转移到账户 B。  在此简化的场景中，
 
 为了维持内部服务之间的数据一致性，确保仅执行一次（exactly-once）的处理非常重要。这意味着每一笔支付操作只能被处理一次，不会被重复执行，也不会被遗漏。
 
-为了在内部服务与外部服务（PSP）之间保持数据一致性，我们通常依赖幂等性（idempotency）和对（reconciliation）。 如果外部服务支持幂等性，那么在支付重试操作时，我们应使用相同的幂等键（idempotency key）。即使外部服务支持幂等 API，仍然需要进行对账，因为我们不应假设外部系统的结果总是正确的。
+为了在内部服务与外部服务（PSP）之间保持数据一致性，我们通常依赖幂等性（idempotency）和对账（reconciliation）。 如果外部服务支持幂等性，那么在支付重试操作时，我们应使用相同的幂等键（idempotency key）。即使外部服务支持幂等 API，仍然需要进行对账，因为我们不应假设外部系统的结果总是正确的。
 
 如果数据被复制，复制延迟可能会导致主数据库与副本之间的数据不一致。通常有两种方法可以解决这个问题：
 
@@ -516,7 +516,7 @@ https://www.confluent.io/blog/chain-services-exactly-guarantees/
 
 [22] Raft: https://raft.github.io/
 
-[23] YogabyteDB: https://www.yugabyte.com/
+[23] YugabyteDB: https://www.yugabyte.com/
 
 [24] Cockroachdb:https://www.cockroachlabs.com/
 

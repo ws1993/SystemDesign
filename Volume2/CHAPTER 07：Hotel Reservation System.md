@@ -302,7 +302,9 @@ if (total_reserved + ${numberOfRoomsToReserve}) <= 110% * total_inventory
 1. **生成预订订单**。在客户输入预订的详细信息（房型、入住日期、退房日期等）并点击“继续”按钮后，预订服务会生成一个预订订单。
 2. 系统生成预订订单供客户核对。唯一的 `reservation_id` 由全局唯一 ID 生成器生成，并作为 API 响应的一部分返回。此步骤的 UI 可能如下所示：
 
-![Figure7.9.png](..%2Fimages%2Fv2%2Fchapter07%2FFigure7.9.png)图 9 确认页面 (来源：[4])
+![Figure7.9.png](..%2Fimages%2Fv2%2Fchapter07%2FFigure7.9.png)
+
+图 9 确认页面 (来源：[4])
 
 3a. **提交预订 1**。`reservation_id` 作为请求的一部分被包含在内。它是预订表（图 6）的主键。请注意，幂等键不一定要是 `reservation_id`。我们选择 `reservation_id` 是因为它已经存在，并且非常适用于我们的设计。
 
@@ -426,7 +428,7 @@ Commit
 
 ![Figure7.14 Database constraint](..%2Fimages%2Fv2%2Fchapter07%2FFigure7.14.png)
 
-![Figure7.14 数据库约束](..%2Fimages%2Fv2%2Fchapter07%2FFigure7.14.png)
+图 14 数据库约束
 
 **优点：**
 
@@ -460,7 +462,7 @@ Commit
 
 因此，对于存储选择，理想情况下我们希望有一种**生存时间 (Time-to-live, TTL)** 机制来自动删除过期数据。历史数据可以在不同的数据库中查询。Redis 是一个不错的选择，因为 TTL 和**最近最少使用 (Least Recently Used, LRU)** 缓存淘汰策略可以帮助我们优化内存利用率。
 
-如果加载速度和数据库可扩展性成为问题（例如，我们正在设计 booking.com 或 expedia.com 规模的系统），我们可以在数据库之上添加一个缓存层，并将“检查客房库存”和“预订房间”逻辑移动到缓存层，如图 16 所示。在这种设计中，只有一小部分请求会到达库存数据库，因为大多数大多数请求都被库存缓存拦截了。值得一提的一点是，即使 Redis 中显示有足够的库存，出于预防考虑，我们仍然需要在数据库端重新检查库存。数据库是库存数据的**事实来源 (source of truth)**。
+如果加载速度和数据库可扩展性成为问题（例如，我们正在设计 booking.com 或 expedia.com 规模的系统），我们可以在数据库之上添加一个缓存层，并将“检查客房库存”和“预订房间”逻辑移动到缓存层，如图 16 所示。在这种设计中，只有一小部分请求会到达库存数据库，因为大多数请求都被库存缓存拦截了。值得一提的一点是，即使 Redis 中显示有足够的库存，出于预防考虑，我们仍然需要在数据库端重新检查库存。数据库是库存数据的**事实来源 (source of truth)**。
 
 
 ![图 16 缓存](..%2Fimages%2Fv2%2Fchapter07%2FFigure7.16.png)
